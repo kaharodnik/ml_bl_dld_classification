@@ -56,13 +56,13 @@ print(f'Classification Report:\n{classification_rep}')
 
 #=========================================================
 # Cross_Validation and LOOCV
-#from sklearn.model_selection import KFold
+#from sklearn.model_selection import KFold, StratifiedKFold
 #from sklearn.model_selection import cross_val_score, LeaveOneOut
 
 #model = SVC(kernel='linear',C=1.0,class_weight='balanced')
 
 
-#kfold = KFold(n_splits=6, shuffle=True, random_state=42)
+#kfold = StratifiedKFold(n_splits=6, shuffle=True, random_state=42)
 #loo = LeaveOneOut()
 
 # Perform cross-validation
