@@ -61,7 +61,7 @@ print(f'Classification Report:\n{classification_rep}')
 
 #model = SVC(kernel='linear',C=1.0,class_weight='balanced')
 
-
+#StratifiedKFold ensures each fold has roughly the same proportion of 0s and 1s
 #kfold = StratifiedKFold(n_splits=6, shuffle=True, random_state=42)
 #loo = LeaveOneOut()
 

@@ -44,14 +44,15 @@ print("Classification Report:\n", classification_report(y_test, y_pred))
 print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 #============= Cross_Validation ==================
-from sklearn.model_selection import KFold
+from sklearn.model_selection import KFold, StratifiedKFold
 from sklearn.model_selection import cross_val_score, LeaveOneOut
 import numpy as np
 
 model = SVC(kernel='linear',C=1.0,class_weight='balanced')
 
 # Define the number of folds for cross-validation
-kfold = KFold(n_splits=6, shuffle=True, random_state=42)
+#StratifiedKFold ensures each fold has roughly the same proportion of 0s and 1s
+kfold = StratifiedKFold(n_splits=6, shuffle=True, random_state=42)
 #loo = LeaveOneOut()
 
 # Perform cross-validation
