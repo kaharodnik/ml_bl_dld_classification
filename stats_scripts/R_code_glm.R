@@ -1,5 +1,5 @@
 # ===============================
-# DLD vs TD: Logistic Regression
+# DLD vs TD: Logistic Regression with GLM
 # ===============================
 
 library(here)
@@ -13,7 +13,7 @@ head(data)
 # -------------------------------
 # Standardize continuous predictors (z-score) prior to model fitting
 # -------------------------------
-data$MLU_with_mazes <- as.numeric(scale(data$MLU_with_mazes))
+data$MLU_with_mazes <- as.numeric(scale(data$MLU_with_mazes)) #numeric is optional here
 data$TNU <- as.numeric(scale(data$TNU))
 data$Types_with_mazes <- as.numeric(scale(data$Types_with_mazes))
 data$FCWR <- as.numeric(scale(data$FCWR))
